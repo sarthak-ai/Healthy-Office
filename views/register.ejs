@@ -1,0 +1,38 @@
+<%- include ("./partials/messages"); %>
+<form action="/users/register" method="POST" novalidate>
+  <p class="text-start fs-1 fw-normal">Register</p>
+  <div class="mb-3">
+    <label for="name" class="form-label">Enter your name</label>
+    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" value="<%= typeof name != 'undefined' ? name : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="organization" class="form-label">Enter your organization</label>
+    <input type="text" class="form-control" name="organization" id="organization" placeholder="Enter your organization" value="<%= typeof organization != 'undefined' ? organization : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="eid" class="form-label">Enter your id</label>
+    <input type="text" class="form-control" name="eid" id="eid" placeholder="Enter your id" value="<%= typeof eid != 'undefined' ? eid : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="mobile" class="form-label">Enter your mobile no</label>
+    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter your mobile no" value="<%= typeof mobile != 'undefined' ? mobile : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" id="email" placeholder="email" aria-describedby="emailHelp" value="<%= typeof email != 'undefined' ? email : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="password" placeholder="password" value="<%= typeof password != 'undefined' ? password : '' %>" required>
+  </div>
+  <div class="mb-3">
+    <label for="card" class="form-label">Upload your ID Card (Formats: png, jpeg)</label>
+    <input type="image" class="form-control" src="" alt="Upload" name="card" id="card" required>
+  </div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+  <div class="mb-3">
+    <p class="text-start fs-4 fw-normal">Have an account <a href="/users/login">Login</a></p>
+  </div>
+</form>
